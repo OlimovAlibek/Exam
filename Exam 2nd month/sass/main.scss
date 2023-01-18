@@ -1,0 +1,39 @@
+    @import "./variables";
+    @import "./mixins";
+    @font-face {
+        font-family: "Space Mono";
+        src: url(../fonts/Space_Mono/SpaceMono-Regular.ttf);
+    }
+    
+    @font-face {
+        font-family: "Lexend Deca";
+        src: url(../fonts/Lexend_Deca/static/LexendDeca-Regular.ttf);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    @include for-tablet-only {
+        .container {
+            max-width: 689px;
+        }
+    }
+    
+    @include for-mobile-only {
+        .container {
+            max-width: 311px;
+        }
+    }
+    
+    @import "./all-blocks/all-block";

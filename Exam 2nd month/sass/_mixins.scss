@@ -1,0 +1,26 @@
+@mixin center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin fontnav {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+
+@mixin for-tablet-only {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-mobile-only {
+    @media (max-width: 689px) {
+        @content ;
+    }
+}
